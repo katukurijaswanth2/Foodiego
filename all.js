@@ -143,7 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h2>${category.strCategory}</h2>
                 <p>${category.strCategoryDescription}</p>
               </div>
+              <div class="m-title">
               <h1 class="meals-title">MEALS</h1>
+              </div>
               
             `;
           }
@@ -165,8 +167,14 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
             <a href="meal.html?id=${meal.idMeal}&category=${categoryName}">
+            <div class="meal-item-card">
+              <div class="meal-image-">
               <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="mealimg-in-category">
-              <span class="meal-name-in-category">${meal.strMeal}</span>
+              </div>
+              <div class="meal-item-name">
+              <span >${meal.strMeal}</span>
+              </div>
+              </div>
             </a>
           `;
 
