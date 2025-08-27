@@ -4,6 +4,11 @@
     font-family: Arial, sans-serif;
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   .nav-header {
     display: flex;
     align-items: center;
@@ -267,40 +272,44 @@
     }
   }
 
- .Cat {
-  display: flex;
-  flex-direction: column;   /* ensure vertical stacking */
-  width: 85%;
-  position: sticky;
-  top: 1px;
-  margin: 10px auto;
-  padding: 10px;
-    z-index: 10; 
-  background-color: black; /* optional */
-}
+  .Cat {
+    display: flex;
+    flex-direction: column;
+    /* ensure vertical stacking */
+    width: 85%;
+    position: sticky;
+    top: 1px;
+    margin: 10px auto;
+    padding: 10px;
+    z-index: 10;
+    background-color: black;
+    /* optional */
+  }
 
-.Cat h1 {
-  font-family: "Rubik Gemstones", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 4rem;
-  margin: 0;
-  color: rgba(253, 251, 251, 1);
+  .Cat h1 {
+    font-family: "Rubik Gemstones", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin: 0;
+    color: rgba(253, 251, 251, 1);
 
-        /* distance from top of viewport */
-  z-index: 10;        /* stay above content */
+    /* distance from top of viewport */
+    z-index: 10;
+    /* stay above content */
 
-  background-color: rgba(0,0,0,0.3); /* optional for readability */
-  padding: 5px 0;
-}
+    background-color: rgba(0, 0, 0, 0.3);
+    /* optional for readability */
+    padding: 5px 0;
+  }
 
-/* Example content below the h1 */
-.Cat .content {
-  margin-top: 20px;
-  line-height: 1.6;
-  color: #f5f5f5;
-  font-family: "Playfair Display", serif;
-}
+  /* Example content below the h1 */
+  .Cat .content {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #f5f5f5;
+    font-family: "Playfair Display", serif;
+  }
 
   #home-cards {
     width: 85%;
@@ -312,67 +321,7 @@
     align-items: center;
     max-width: 1600px;
   }
- .category-card {
-  padding: 0.5rem;
-    box-shadow: 5px 5px 15px rgb(145, 136, 136);
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
- height: 300px;
-    opacity: 0;
-    border: 1px solid rgb(179, 175, 175);
-    animation: fadeInUp 0.6s ease forwards;
-  }
-.meal-image-{
-  align-items: start;
-}
-  .category-card img {
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-  }
-  .meal-item-name{
-    padding: 5px;
-     text-wrap: wrap;
-    margin-top: 10px;
-          
 
-height: 50%;
-background-color: red;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-        height: 50%;
-        display: flex;
-        align-items: center;
-        align-items: center;
-            display: block;
-
-  }
-
-  .category-card span {
-   
-          }
-
-         .category-card span:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-          }
-         
- 
-    .category-card span:hover{
-       background-position: right center;
-            color: #fff;
-            text-decoration: none;
-    }
   .home-card {
     padding: 0.5rem;
     box-shadow: 5px 5px 15px rgb(145, 136, 136);
@@ -381,7 +330,7 @@ background-color: red;
     flex-direction: column;
     align-items: center;
     justify-content: center;
- 
+
     opacity: 0;
     border: 1px solid rgb(179, 175, 175);
     animation: fadeInUp 0.6s ease forwards;
@@ -389,33 +338,34 @@ background-color: red;
 
   .home-name {
     display: block;
-  padding: 12px 30px;
-  margin: 10px;
+    padding: 12px 30px;
+    margin: 10px;
 
-  margin-top: 10px;
-  bottom: 0;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
+    margin-top: 10px;
+    bottom: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
 
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #fff;
-  
-  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
-  background-size: 200% auto;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
 
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
+    background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+    background-size: 200% auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
   }
-  .home-name:hover{
-        background-position: right center;
-            color: #fff;
-            text-decoration: none;
+
+  .home-name:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
   }
 
   .home-img {
@@ -439,37 +389,44 @@ background-color: red;
   }
 
   .category-info h2 {
-         color: #ffffff;
-      font-family: "Rubik Gemstones", system-ui; 
-  font-weight: 400;
-  font-style: normal;
-  font-size: 4rem;
-  margin: 0;
+    color: #ffffff;
+    font-family: "Rubik Gemstones", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin: 0;
 
-}
-  
+  }
+
 
   .category-info p {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* optional, balances flex children */
-  padding: 0 20px;               /* slightly more breathing room */
-  margin-top: 20px;              /* consistent spacing */
-  
-  text-align: justify;
-  line-height: 1.6;              /* better readability */
-  letter-spacing: 0.8px;         /* subtle but elegant spacing */
-  color: #f5f5f5;
-  
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;               /* easier on the eyes */
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;              /* keeps lines from being too wide */
- }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* optional, balances flex children */
+    padding: 0 20px;
+    /* slightly more breathing room */
+    margin-top: 20px;
+    /* consistent spacing */
+
+    text-align: justify;
+    line-height: 1.6;
+    /* better readability */
+    letter-spacing: 0.8px;
+    /* subtle but elegant spacing */
+    color: #f5f5f5;
+
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    /* easier on the eyes */
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    /* keeps lines from being too wide */
+  }
 
   #category-meals {
     width: 85%;
@@ -481,28 +438,103 @@ background-color: red;
     align-items: center;
     max-width: 1600px;
   }
-.m-title {
-  position: sticky;
-  top: 0; /* sticks at the top */
-  color: gold; /* visible */
-  z-index: 10; /* stays above other content */
-padding: 0;
-margin-top: 10px; 
-display: flex;
-  justify-content: left;
-  align-items: center;
-}
 
-.meals-title {
-  font-family: "Nosifer", sans-serif;
-  font-weight: 400;
-  color: gold;
-  margin: 0;
-  width: 85%;
+  .m-title {
+    position: sticky;
+    top: 0;
+    /* sticks at the top */
+    color: gold;
+    /* visible */
+    z-index: 10;
+    /* stays above other content */
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
 
-}
+  .meals-title {
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    color: gold;
+    margin: 0;
+    width: 85%;
 
+  }
+
+  /* 
+
+category cards code
+
+*/
+  .meal-item-card {
+    height: 270px;
+background: #C9CCD3;
+ background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: lighten;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
  
+    overflow: hidden;
+        border-radius: 0 0 18px 0;
+    /* ensures no child spills out */
+  }
+
+  /* Image container */
+  .cmeal-img {
+    margin-top: 5px;
+    height: 200px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Meal image */
+  .cmeal-img img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Meal name box */
+  .cmeal-name {
+    height: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    background-color: rgba(128, 0, 128, 0.53);
+    box-sizing: border-box;
+    border-radius: 14px 0 14px 0;
+  }
+
+  .cmeal-name span {
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-family: "Epunda Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    /* border-radius: 10px; */
+  }
+
+
+
+
+
+
+
+
 
   .category-card a {
     text-decoration: none;
@@ -544,7 +576,7 @@ display: flex;
     max-width: 100%;
   }
 
- 
+
 
   .path-parent {
     display: flex;

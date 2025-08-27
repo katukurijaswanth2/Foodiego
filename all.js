@@ -168,10 +168,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <a href="meal.html?id=${meal.idMeal}&category=${categoryName}">
             <div class="meal-item-card">
-              <div class="meal-image-">
-              <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="mealimg-in-category">
+              <div class="cmeal-img">
+              <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
               </div>
-              <div class="meal-item-name">
+              <div class="cmeal-name">
               <span >${meal.strMeal}</span>
               </div>
               </div>
