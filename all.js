@@ -256,8 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div class="meal-header">
                 <h1>${meal.strMeal}</h1>
-                <p class="meal-category-p"><b>Category:</b> ${meal.strCategory}</p>
-                <p class="tags">tags:<span> ${meal.strTags || ""}</span></p>
+            
+                <p class="meal-category-p">Category: <span>${meal.strCategory}</span> </p>
+               
                 ${meal.strYoutube
             ? `<p class="scource-link">Source: <a href="${meal.strYoutube}" target="_blank">Watch on YouTube</a></p>`
             : ""
