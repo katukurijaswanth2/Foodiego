@@ -8,28 +8,33 @@
     margin: 0;
     padding: 0;
   }
-#FoodieGo{
-  text-decoration: none;
 
-}
-nav a{
-  text-decoration: none;
+  #FoodieGo {
+    text-decoration: none;
 
-}
-nav{
-  padding: 20px 0;
-}
-.path-parent{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-}
-.path >p{
-  padding: 10px;
-  font-size: 1.5rem;
-}
+  }
+
+  nav a {
+    text-decoration: none;
+
+  }
+
+  nav {
+    padding: 20px 0;
+  }
+
+  .path-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .path>p {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
 
   .nav-header {
     display: flex;
@@ -42,7 +47,8 @@ nav{
   nav {
     position: relative;
   }
-/* 
+
+  /* 
   .menu {
     /* position: absolute;
     top: 2px;
@@ -310,14 +316,15 @@ nav{
     display: flex;
     flex-direction: column;
     /* ensure vertical stacking */
-    width: 85%;
+    width: 100%;
     position: sticky;
     top: 1px;
     margin: 10px auto;
-    padding: 10px;
+    /* padding-left: 10px; */
     z-index: 10;
     background-color: black;
     /* optional */
+   
   }
 
   .Cat h1 {
@@ -325,14 +332,14 @@ nav{
     font-weight: 400;
     font-style: normal;
     font-size: 4rem;
-    margin: 0;
+    width: 100%;
     color: rgba(253, 251, 251, 1);
 
     /* distance from top of viewport */
     z-index: 10;
     /* stay above content */
 
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
     /* optional for readability */
     padding: 5px 0;
   }
@@ -448,24 +455,33 @@ nav{
     transform: rotate(-2deg);
 
   }
-  @media (max-width: 480px) {
-      .category-info h2{
-        font-size: 2rem;
 
-      }
-      .Cat h1{
-        font-size: 2rem;
-      }
-      .m-title{
-        font-size: 0.9rem;
-      }
-      .hero{
-        height: 50%;
-      }
-      nav{
-        padding: 10px 0;
-      }
-      /* .hungry{
+  @media (max-width: 480px) {
+    .category-info h2 {
+      font-size: 2rem;
+
+    }
+
+    .Cat h1 {
+      font-size: 2.9rem;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .m-title {
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      height: 65%;
+    }
+
+    nav {
+      padding: 10px 0;
+    }
+
+    /* .hungry{
         position: fixed;
         bottom: 5px;
         right: -5px;
@@ -939,7 +955,7 @@ category cards code
     .scource-link {
       font-size: 1.6rem;
     }
-   
+
 
     .Ingredients li {
       font-size: 18px;
