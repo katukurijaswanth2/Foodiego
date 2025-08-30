@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  let FoodieGo = document.getElementById("FoodieGo");
+  if (FoodieGo) {
+    FoodieGo.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  }
+
   // ----------------------------
   // GLOBAL: Build Menu Function
   // ----------------------------
@@ -47,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error("Menu fetch error:", err));
   }
 
-  //  Always call this, so menu is built on all pages
+  // Always call this, so menu is built on all pages
   buildMenu();
 
   // ----------------------------
@@ -144,9 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>${category.strCategoryDescription}</p>
               </div>
               <div class="m-title">
-              <h1 class="meals-title">MEALS</h1>
+                <h1 class="meals-title">MEALS:</h1>
               </div>
-              
             `;
           }
         }
@@ -164,16 +170,14 @@ document.addEventListener("DOMContentLoaded", () => {
           mealCard.classList.add("category-card");
 
           mealCard.innerHTML = `
-        
-
             <a href="meal.html?id=${meal.idMeal}&category=${categoryName}">
-            <div class="meal-item-card">
-              <div class="cmeal-img">
-              <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-              </div>
-              <div class="cmeal-name">
-              <span >${meal.strMeal}</span>
-              </div>
+              <div class="meal-item-card">
+                <div class="cmeal-img">
+                  <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                </div>
+                <div class="cmeal-name">
+                  <span>${meal.strMeal}</span>
+                </div>
               </div>
             </a>
           `;
@@ -199,34 +203,26 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         let meal = data.meals[0];
 
-        // ========================
-        // INGREDIENTS
-        // ========================
+        // Ingredients
         let ingredientsList = "";
         for (let i = 1; i <= 20; i++) {
           let ingredient = meal["strIngredient" + i];
-          let measure = meal["strMeasure" + i];
-
           if (ingredient && ingredient.trim() !== "") {
-            ingredientsList += `<li> ${ingredient}</li>`;
+            ingredientsList += `<li>${ingredient}</li>`;
           }
         }
-        //======================= 
-        //     Measurements
-        //=======================
 
+        // Measurements
         let MeasurementsList = "";
         for (let i = 1; i <= 20; i++) {
           let ingredients = meal["strIngredient" + i];
           let measurements = meal["strMeasure" + i];
           if (ingredients && ingredients.trim() !== "") {
-            MeasurementsList += `<li>${measurements}${ingredients}</li>`;
+            MeasurementsList += `<li>${measurements} ${ingredients}</li>`;
           }
         }
 
-        // ========================
-        // INSTRUCTIONS
-        // ========================
+        // Instructions
         let instructionSteps = meal.strInstructions.split(/\r?\n/);
         let instructionsList = "";
         instructionSteps.forEach(step => {
@@ -235,20 +231,17 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        // ========================
-        // PUT EVERYTHING INTO HTML
-        // ========================
+        // Render
         mealDetails.innerHTML = `
           <div class="meal-section">
-          <div class="path-parent">
-            <div class="path">
-              <a href="index.html">HOME</a>
-              <h1>>></h1>
-              <p>
-                <a href="category.html?name=${categoryName}" class="back-link">Back to ${categoryName}</a>
-              </p>  
+            <div class="path-parent">
+              <div class="path">
+             
+                <p>
+                  <a href="category.html?name=${categoryName}" class="back-link">Back to ${categoryName}</a>
+                </p>  
+              </div>
             </div>
-          </div>
 
             <div class="meal-hero-section">
               <div class="meal-image-sec">
@@ -256,23 +249,18 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div class="meal-header">
                 <h1>${meal.strMeal}</h1>
-            
-                <p class="meal-category-p">Category: <span>${meal.strCategory}</span> </p>
-               
-                ${meal.strYoutube
-            ? `<p class="scource-link">Source: <a href="${meal.strYoutube}" target="_blank">Watch on YouTube</a></p>`
-            : ""
-          }
-
+                <p class="meal-category-p">Category: <span>${meal.strCategory}</span></p>
+                ${meal.strYoutube ? `<p class="scource-link">Source: <a href="${meal.strYoutube}" target="_blank">Watch on YouTube</a></p>` : ""}
                 <div class="Ingredients">
                   <h2>Ingredients</h2>
                   <ul>${ingredientsList}</ul>
                 </div>
               </div>
             </div>
+
             <div class="measurements">
-            <h2>MEASUREMENTS</h2>
-            <ul class="measurement-list">${MeasurementsList}</ul>
+              <h2>MEASUREMENTS</h2>
+              <ul class="measurement-list">${MeasurementsList}</ul>
             </div>
 
             <div class="instructions">

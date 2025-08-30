@@ -6,40 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodieGo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="icon" type="image/x-icon" href="./image/pizza.png">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
-<style>
-#mydiv{
-    display: none;
-    height: 100vh;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#mydiv img{
-    height: 100vh;
-    width: 100%;
-    z-index: 101;
+    <link rel="icon" type="image/x-icon" href="./image/pizza.png">
 
-}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #mydiv {
+            display: none;
+            height: 100vh;
+            z-index: 100;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #mydiv img {
+            height: 100vh;
+            width: 100%;
+            z-index: 101;
+
+        }
+        
+      
+    </style>
 </head>
 
 <body>
-    
+
     <nav>
         <div class="nav-header">
             <div class="icon">
                 <i class="fa-solid fa-burger"></i>
-                <h1>FoodieGo</h1>
+                <a href="index.html"><h1 id="FoodieGo">FoodieGo</h1></a>
             </div>
 
             <!-- Search Box with Icon -->
@@ -47,18 +51,21 @@
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" id="input-text" placeholder="Search for Meal">
             </div> -->
+            <div class="menu">
+                <i class="fa-regular fa-circle-xmark" id="wrong"></i>
+
+                <ul class="menu-main" id="main-menu"></ul>
+            </div>
 
             <div class="hamburger" id="hamBurger">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
+
     </nav>
 
-    <div class="menu">
-        <i class="fa-regular fa-circle-xmark" id="wrong"></i>
-        
-        <ul class="menu-main" id="main-menu"></ul>
-    </div>
+
+
 
     <div class="hero">
         <img src="./image/meal-finder.jpg" alt="">
@@ -71,7 +78,7 @@
     <div id="home-cards"></div>
 
     </div>
-        <script src="all.js"></script>
+    <script src="all.js"></script>
 </body>
 
 </html>

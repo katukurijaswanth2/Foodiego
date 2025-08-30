@@ -4,100 +4,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <title>FoodieGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/x-icon" href="./image/pizza.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-  
   <style>
-   /* body{
+    /* body{
     height: 100vh;
     background: #020024;
 background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
    } */
-    
-   body{
 
-   height: 100vh;
-    background: #42275a;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    body {
 
-}
+      height: 100vh;
+      background: #42275a;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #734b6d, #42275a);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #734b6d, #42275a);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
-
-.hungry {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  padding: 5px;
-  z-index: 10;
-  margin: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #42275a; /* fallback bg */
-  overflow: visible;
-}
-
-/* The animated border */
-.hungry::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* fills parent */
-  border-radius: 50%;
-  padding: 1px; /* border thickness */
-  background: conic-gradient(rgb(40, 246, 21) 0deg, transparent 0deg);
-
-  /* Show only the ring area */
-  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 6px), black calc(100% - 5px));
-  mask: radial-gradient(farthest-side, transparent calc(100% - 6px), black calc(100% - 5px));
-
-  pointer-events: none; /* let clicks go through */
-}
-
-.hungry img {
-  height: 98%;
-  width: 98%;
-
-  border-radius: 50%;
-  background: #8f0f0f;
-  position: relative; /* ensures it's above ::before */
-  z-index: 1;
-}
+    }
 
 
+
+    .hungry {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      padding: 5px;
+      z-index: 10;
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #42275a;
+      /* fallback bg */
+      overflow: visible;
+    }
+
+    /* The animated border */
+    .hungry::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* fills parent */
+      border-radius: 50%;
+      padding: 1px;
+      /* border thickness */
+      background: conic-gradient(rgb(40, 246, 21) 0deg, transparent 0deg);
+
+      /* Show only the ring area */
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 6px), black calc(100% - 5px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 6px), black calc(100% - 5px));
+
+      pointer-events: none;
+      /* let clicks go through */
+    }
+
+    .hungry img {
+      height: 98%;
+      width: 98%;
+
+      border-radius: 50%;
+      background: #8f0f0f;
+      position: relative;
+      /* ensures it's above ::before */
+      z-index: 1;
+    }
   </style>
 </head>
 
 <body>
+  <nav>
+    <div class="nav-header">
+      <div class="icon">
+        <i class="fa-solid fa-burger"></i>
+        <a href="index.html">
+          <h1 id="FoodieGo">FoodieGo</h1>
+        </a>
+      </div>
+
+      <!-- Search Box with Icon -->
+      <!-- <div class="search">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="input-text" placeholder="Search for Meal">
+            </div> -->
+      <div class="menu">
+        <i class="fa-regular fa-circle-xmark" id="wrong"></i>
+
+        <ul class="menu-main" id="main-menu"></ul>
+      </div>
+
+      <div class="hamburger" id="hamBurger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+  </nav>
+
   <div id="category-details"></div>
   <div id="category-meals"></div>
-  
-      <div class="hungry">
-        <img src="./image/hh.png" alt="">
-      </div>   
-    <script>window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 360; // 0–360 degrees
 
-  const hungry = document.querySelector(".hungry");
-  hungry.style.background = `conic-gradient(white ${scrollPercent}deg, transparent ${scrollPercent}deg)`;
-});</script>     
+  <div class="hungry">
+    <img src="./image/hh.png" alt="">
+  </div>
+  <script>window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 360; // 0–360 degrees
+
+      const hungry = document.querySelector(".hungry");
+      hungry.style.background = `conic-gradient(Yellowgreen ${scrollPercent}deg, transparent ${scrollPercent}deg)`;
+    });</script>
   <script src="all.js"></script>
 </body>
 
