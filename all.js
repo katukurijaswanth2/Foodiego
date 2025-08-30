@@ -60,33 +60,33 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------
   // GLOBAL SEARCH FEATURE (works everywhere)
   // ----------------------------
-  let searchInput = document.querySelector(".search-input");
-  let searchBtn = document.querySelector(".search-icon");
+  // let searchInput = document.querySelector(".search-input");
+  // let searchBtn = document.querySelector(".search-icon");
 
-  if (searchInput && searchBtn) {
-    searchBtn.addEventListener("click", () => {
-      let query = searchInput.value.trim();
-      if (query === "") return;
+  // if (searchInput && searchBtn) {
+  //   searchBtn.addEventListener("click", () => {
+  //     let query = searchInput.value.trim();
+  //     if (query === "") return;
 
-      fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
-        .then(res => res.json())
-        .then(data => {
-          if (data.meals && data.meals.length > 0) {
-            let meal = data.meals[0];
-            window.location.href = `meal.html?id=${meal.idMeal}&category=${meal.strCategory}`;
-          } else {
-            alert("No meal found. Please try another name.");
-          }
-        })
-        .catch(err => console.error("Search fetch error:", err));
-    });
+  //     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         if (data.meals && data.meals.length > 0) {
+  //           let meal = data.meals[0];
+  //           window.location.href = `meal.html?id=${meal.idMeal}&category=${meal.strCategory}`;
+  //         } else {
+  //           alert("No meal found. Please try another name.");
+  //         }
+  //       })
+  //       .catch(err => console.error("Search fetch error:", err));
+  //   });
 
-    searchInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        searchBtn.click();
-      }
-    });
-  }
+  //   searchInput.addEventListener("keypress", (e) => {
+  //     if (e.key === "Enter") {
+  //       searchBtn.click();
+  //     }
+  //   });
+  // }
 
   // ----------------------------
   // HOME PAGE (index.html)
